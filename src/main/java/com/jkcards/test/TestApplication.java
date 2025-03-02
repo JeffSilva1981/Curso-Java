@@ -39,8 +39,9 @@ public class TestApplication implements CommandLineRunner {
 
         Order order = new Order(productCode, basicValue, discont);
 
-        System.out.println("Order code: " + order.getCode());
-        System.out.println("Total value: " + orderService.total(order));
+        System.out.println("Pedido Código: " + order.getCode());
+        System.out.println(String.format("Valor total: R$ %.2f", orderService.total(order)));
+
 
     }
 }
