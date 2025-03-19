@@ -39,4 +39,9 @@ public class Order {
     public void setDiscount(Double discount) {
         this.discount = discount;
     }
+
+    public Double valueDiscount(Double discount){
+        Double totalValueDiscount = (getBasic() / 100) * getDiscount();
+        return totalValueDiscount;
+    }
 }
